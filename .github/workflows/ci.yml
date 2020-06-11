@@ -17,6 +17,6 @@ jobs:
       - name: 初始化git并且添加源
         run:  cd packages && cd temp/slate-react && git config --global user.email "15014006740@163.com" && git config --global user.name "onion"  && git init && git remote add origin git@github.com:Project5E/slate.git
       - name: git init 并且强推
-        run: cd packages && cd temp/slate-react && git add . && git commit -am "update slate react" && git push origin 5e-slate-react -f && cd ../.. && rm -rf temp  
+        run: cd packages && cd temp/slate-react && git add . && git commit -am "update slate react" && git checkout -b 5e-slate-react && git push origin 5e-slate-react -f && cd ../.. && rm -rf temp  
         env:
           CI: true

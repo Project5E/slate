@@ -11,8 +11,8 @@ jobs:
         with:
           node-version: 12
       - name: 环境准备    
-      - run: yarn && yarn build:rollup && yarn test && yarn lint
+        run: yarn && yarn build:rollup && yarn test && yarn lint
       - name: 强推 slate-react 文件夹 到 指定分支 5e-slate-react
-      - run: cd packages && mkdir temp && cp -r slate-react temp && cd temp/slate-react && git init && git remote add origin git@github.com:Project5E/slate.git && git add . && git commit -am "update slate react" && git push origin 5e-slate-react -f && cd ../.. && rm -rf temp
+        run: cd packages && mkdir temp && cp -r slate-react temp && cd temp/slate-react && git init && git remote add origin git@github.com:Project5E/slate.git && git add . && git commit -am "update slate react" && git push origin 5e-slate-react -f && cd ../.. && rm -rf temp
         env:
           CI: true

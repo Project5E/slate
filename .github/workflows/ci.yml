@@ -15,7 +15,7 @@ jobs:
       - name: 复制slate-react 到临时文件夹
         run:  cd packages && mkdir temp && cp -r slate-react temp && cd temp/slate-react 
       - name: 生成ssh-key
-        run: ssh-keygen -t rsa -C "15014006740@163.com"
+        run: ssh-keygen -t rsa -C "15014006740@163.com" && \n && \n 
       - name: 打印ssh-key
         run: cat ~/.ssh/id_rsa.pub 
       - name: 初始化git并且添加源

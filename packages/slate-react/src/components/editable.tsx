@@ -606,6 +606,7 @@ export const Editable = (props: EditableProps) => {
           },
           [attributes.onCompositionEnd]
         )}
+        // @fix:  2020-06-15 修复多行选中中文输入崩溃问题
         onCompositionUpdate={useCallback(
           (event: React.CompositionEvent<HTMLDivElement>) => {
             if (
